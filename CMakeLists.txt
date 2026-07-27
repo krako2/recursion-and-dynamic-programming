@@ -1,7 +1,3 @@
-if(MSVC)
-	message(FATAL_ERROR "MSVC banned.")
-endif()
-
 cmake_minimum_required(VERSION 3.31)
 project(recursion-and-dynamic-programming)
 
