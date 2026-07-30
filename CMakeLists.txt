@@ -5,24 +5,24 @@ set(CMAKE_C_STANDARD 90)
 set(CMAKE_C_STANDARD_REQUIRED True)
 
 if(CMAKE_C_COMPILER_ID STREQUAL "Clang")
-	add_compile_options(
-		-ansi
-		-Weverything
-		-Werror
-		-Wno-unsafe-buffer-usage
-	)
+    add_compile_options(
+        -ansi
+        -Weverything
+        -Werror
+        -Wno-unsafe-buffer-usage
+    )
 endif()
 
 if(CMAKE_C_COMPILER_ID STREQUAL "GNU")
-	add_compile_options(-Wall -Wextra -Wpedantic -Werror)
+    add_compile_options(-Wall -Wextra -Wpedantic -Werror)
 endif()
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-	add_compile_options(-g)
+    add_compile_options(-g)
 endif()
 
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
-	add_compile_options(-O3)
+    add_compile_options(-O3)
 endif()
 
 set(RECURSION recursion)
