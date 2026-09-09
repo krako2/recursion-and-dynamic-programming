@@ -2,8 +2,7 @@
 
 #define FIXED_MEMORY 1024
 
-static unsigned long fibonacci(unsigned long n)
-{
+static unsigned long fibonacci(unsigned long n) {
     size_t i;
     unsigned long sequence[FIXED_MEMORY];
 
@@ -15,8 +14,7 @@ static unsigned long fibonacci(unsigned long n)
     sequence[1] = 1;
 
     i = 2;
-    while (i < n)
-    {
+    while (i < n) {
         sequence[i] = sequence[i - 1] + sequence[i - 2];
         ++i;
     }
@@ -24,8 +22,7 @@ static unsigned long fibonacci(unsigned long n)
     return sequence[i - 1];
 }
 
-static unsigned long summation(unsigned long n)
-{
+static unsigned long summation(unsigned long n) {
     size_t i;
     unsigned long sequence[FIXED_MEMORY];
     unsigned long position;
@@ -38,8 +35,7 @@ static unsigned long summation(unsigned long n)
 
     i = 1;
     position = 2;
-    while (i < n)
-    {
+    while (i < n) {
         sequence[i] = sequence[i - 1] + position;
         ++i;
         ++position;
@@ -48,8 +44,7 @@ static unsigned long summation(unsigned long n)
     return sequence[i - 1];
 }
 
-static unsigned long factorial(unsigned long n)
-{
+static unsigned long factorial(unsigned long n) {
     size_t i;
     unsigned long sequence[FIXED_MEMORY];
     unsigned long position;
@@ -62,8 +57,7 @@ static unsigned long factorial(unsigned long n)
 
     i = 1;
     position = 2;
-    while (i < n)
-    {
+    while (i < n) {
         sequence[i] = sequence[i - 1] * position;
         ++i;
         ++position;
@@ -72,8 +66,7 @@ static unsigned long factorial(unsigned long n)
     return sequence[i - 1];
 }
 
-int main(void)
-{
+int main(void) {
     unsigned long fib;
     unsigned long sum;
     unsigned long fac;
